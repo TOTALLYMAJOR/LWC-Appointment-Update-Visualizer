@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Real-Time Service Appointment Updates">
+        <div class="slds-m-around_medium">
+            <template if:true={updates}>
+                <template for:each={updates} for:item="update">
+                    <p key={update.id}>
+                        <strong>Appointment ID:</strong> {update.id}
+                        <br/>
+                        <strong>Status:</strong> {update.status}
+                        <br/>
+                        <strong>Updated Time:</strong> {update.updatedTime}
+                    </p>
+                    <hr/>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
